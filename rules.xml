@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo"
+        xmlns:css="http://namespaces.plone.org/diazo/css"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:xsl="http://www.w3.org/1999/XSL/Transform"    
+        xmlns:xi="http://www.w3.org/2001/XInclude">
+        <xi:include href="++theme++barceloneta/backend.xml" />
+        <rules css:if-content="body.viewpermission-view, body.viewpermission-none">
+      
+        <!-- Por importar barceloneta que podemos editar como queremos -->
+        
+        <!--Transform/XInclude (quatro ultimas linhas acima) permitem que o seu site tenha a barra lateral de edicao de conteudo
+        na pagina inicial, isso eh encontrado abrindo o thema barceloneta , no arquivo backend.xml-->
+        
+        <theme href="index.html" />
+        
+        
+        <!-- Replace title with Plone's page title -->
+        <replace css:theme="title" css:content="title" />
+        <replace css:theme="div#content" css:content="article#content" /> <!--Aqui estou substituindo o conteudo do meu layout pelo conteudo original da pagina -->
+       
+       
+        <replace css:theme="div#logger" css:content="div#portal-anontools"  />    <!--Essa div (logger) criei para possibilitar persistir o link para formulario de acesso (login e senha)-->
+        <replace css:theme="div#menu-topo" css:content="div#portal-searchbox"  /> <!--Criei essa div para reposicionar a search box do site original-->
+        
+        
+       <!-- <copy attributes="div#mainnavigation" css:theme="header" css:content="body"/> -->
+       <!--Nao sei o que tava tentando fazer aqui, mas parece nao ser relevante-->
+        
+        
+     <!--After e before inserem um bloco que esta no conteudo no -->    
+        
+        
+        <after css:theme="div.logo" css:content="Acessar" />
+        <!--Essa tag coloca o link para formulario de acesso apos o Logo que inseri-->
+        <!--Para testar, trocar after por before-->
+      
+       <!-- <after css:theme="header" css:content=" div#portal-header" />
+        <before css:theme="footer" css:content="div.col-xs-12" /> -->
+        
+        <!-- Copy base tag from Plone -->
+        <before css:theme-children="html head" css:content="html head base" />
+
+        <!-- Copy link, style, meta tags from Plone head -->
+        <after css:theme-children="html head"
+               content="/html/head/link | /html/head/style | /html/head/meta" />
+
+        <!-- merge classes from Plone body with theme body -->
+        <merge attributes="class" css:theme="body" css:content="body" />
+
+        <!-- Copy script tags from Plone head to end of body -->
+        <after css:theme-children="html body" css:content="html head script" />
+
+        <!-- Insert your own rules here -->
+
+    </rules>
+
+</rules>
