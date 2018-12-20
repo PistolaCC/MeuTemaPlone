@@ -41,19 +41,25 @@
        <replace css:theme="div#content" css:content="article#content" /> 
        
        <!--Coloca o local de login caso o usuario nao esteja logado -->
-       <after css:if-not-content="body.userrole-authenticated" css:theme="div#logger" css:content="div#portal-anontools" /> 
+       <after css:if-not-content="body.userrole-authenticated" css:theme="div#logger" css:content="div#portal-anontools" />  
        
        <!--Retira a barra do topo caso nao logado-->
        <drop css:if-content="body.userrole-authenticate" css:theme="#menu1" /> 
        
-           
+       
+       <before css:theme="#menu1" css:content="#above-content-wrapper" />
+       
+       
+       
+       
+       
+       
+       
        
        
     </rules>
 
 </rules>
-
-
 
 
 
