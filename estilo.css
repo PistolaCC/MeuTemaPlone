@@ -13,7 +13,9 @@ body{
 }
 
 
-
+footer{
+    clear:both;
+}
 /*======== MENU do Topo ========= */
 
 
@@ -21,7 +23,9 @@ body{
     width: 100%;
     height: 299px;    
     position:relative;
-    margin-top: -16px;  /*Espaco em branco*/
+    margin-top: -40px;  /*Espaco em branco*/
+    margin-bottom: 0;
+    overflow:auto;
 }
 
 #menu1{
@@ -32,10 +36,11 @@ body{
     left:0;
     margin:0;
     padding:0;
-    margin-top: 0;
+    margin-top: 3%;
     list-style-type: none;  /*Retira bullets*/
-    background-color: white;
     opacity:0.79;
+    background-color:#64605F;
+    
 }
 
 
@@ -125,33 +130,104 @@ li .dropdown {
 
 /*O layout eh: quando nao logado, aparecer botao de loggin e barra de busca
 quando loggado, aparecer apenas a barra*/
+
+/*#searchGaget_form{
+    position:relative;
+}
+*/
+
+
+#after-menu-logo{
+    overflow:auto;
+    background-color: #64605F;
+    margin:0;
+}
+.LSBox{
+    color:white;
+    float:right;
+    background-color: #64605F;
+    margin-right: 5%;
+    margin-bottom: 1%;
+    margin-top:1%;
+    font-family: sans-serif, helvetica;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+#searchGadget_form{
+    background-color:#64605F;
+}
+
+/* ===== Ancora para login*/
+
 #portal-anontools ul{
     position: relative;
-    padding:0;
+    padding: 0;
     margin: 0;
-    background-color: red;
+    background-color: #64605F; 
+    margin-left: 5%;
 }
 
 
 #portal-anontools ul li a{
-    font-family:sans-serif, helvetica;
-    color: black;
+    font-family: sans-serif, helvetica;
+    color: white;
     text-decoration: none;
-    margin-left: 2%;
+    margin-left: 5%;
+    float:left;
+    margin-top:25px;
+    font-weight: bold;
+    font-style: italic;
 }
+
 
 #portal-anontools ul li{
     list-style-type:none;
 }
 
 
+/* ====== Login em nova Aba ======= */
+.pat-formautofocus{
+    position:relative;
+    margin-top: 3%;
+    font-family: sans-serif, helvetica;
+    color: black;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#__ac_name{
+    margin-left:20px;
+    border-radius:7px;
+}
+
+#__ac_password{
+    margin-top: 5px;
+    margin-left:36px;
+    border-radius:7px;
+}
+
+#login-forgotten-password{
+   margin-top: 3%;   
+}
+
+.formControls{
+    margin-top: 1%;   
+}
+
+
+/* ===== Login em uma box ======= */
+
+
+
+
 
 
 
 /*  
-    Pegar barra de busca com replace (e estilizar)
-    Pegar formulario de login (e estilizar)
+    Pegar barra de busca com replace +/-
+    Pegar formulario de login +/-
     Fazer o rodape (E estilizar) (Conteudos baseados no email)
 */
-
 
