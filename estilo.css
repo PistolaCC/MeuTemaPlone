@@ -4,43 +4,42 @@ body{
     margin: 0;
     padding:0;    /*  margin 0 e padding 0 resetam as configuracoes padrao do navegador */
     font-family:sans-serif, helvetica;
+    background-image:url(images/OntoLogo2.png);
+    background-repeat: no-repeat; 
+    background-size: 100% 373px; 
+  
 }
 
+
+
 #content{
-    margin-top: 0;
-    margin-left: 4%;
-    
+    position: absolute;  /* Tem como referencia o elemento mais proximo (divs de cima, embaixo)*/
+    margin-top: 27px;      /* OK */
+    margin-left: 4%;        
 }
 
 
 footer{
     clear:both;
 }
+
+
 /*======== MENU do Topo ========= */
 
 
 .menu-top{
     width: 100%;
-    height: 299px;    
     position:relative;
-    margin-top: -40px;  /*Espaco em branco*/
+    margin-top: 1%;  /*Espaco em branco*/
     margin-bottom: 0;
-    overflow:auto;
+    /*overflow:auto; */
 }
 
 #menu1{
-    background-image:url(images/OntoLogo2.png);
-    background-size: 100% ; /*  Define a proprocao do background onde a imagem fara fundo */
-    background-repeat: no-repeat; /*impede que a imagem se repita */
-    position: relative;
-    left:0;
     margin:0;
     padding:0;
-    margin-top: 3%;
     list-style-type: none;  /*Retira bullets*/
-    opacity:0.79;
-    background-color:#64605F;
-    
+    /*opacity:0.79;*/
 }
 
 
@@ -51,8 +50,8 @@ footer{
 
 #menu1 li a{
     font-family: sans-serif, helvetica;
-    font-size:95%;
-    padding: 1px 4px; /*Define o preenchimento de uma div*/
+    font-size:95%;  
+    padding: 2px 4px; /*Define o preenchimento de uma div*/
     color:white;
     text-decoration: none; 
     font-weight: bold;
@@ -60,24 +59,23 @@ footer{
 }
 
 
-/*Ainda sera melhorado, inserir menu de busca e botao de loggin para acessar (quando usuario nao logado)*/
-
-
 
 /* ======== Dropdown MENU ======== */
 
 li a:hover, .dropdown:hover .dropbtn {
   background-color: #808080;
+  border-radius:5px;
 }
 
 li .dropdown {
   display: inline-block;
+  border-radius:5px;
 }
 
 .dropdown-content {
   display: none;
   position: fixed;
-  background-color: black;
+  background-color: gray;
   margin-left: 0;
   min-width: 160px;
   box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
@@ -90,14 +88,17 @@ li .dropdown {
   text-decoration: none;
   display: block;
   text-align: left;
+  
 }
 
 .dropdown-content a:hover {
     background-color: #f1f1f1;
+    border-radius:5px;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
+  border-radius:4px;
 }
 
 
@@ -118,55 +119,64 @@ li .dropdown {
 }
 */
 
-/*Logo com menu um ficou melhor e mais pratico*/
-
-
-/* ====== Alteracoes no cabecalho e no corpo do conteudo da pagina principal ====*/
-/*Como nao coloquei header no site, tenho que deslocar tudo separadamente (alterar depois)*/
-
 
 
 /* ======= Barra de Busca ======= */
 
-/*O layout eh: quando nao logado, aparecer botao de loggin e barra de busca
-quando loggado, aparecer apenas a barra*/
-
-/*#searchGaget_form{
-    position:relative;
-}
-*/
-
 
 #after-menu-logo{
-    overflow:auto;
-    background-color: #64605F;
-    margin:0;
+    margin-top:26%;
+    background-color: #383332;
+    padding: 5px;
 }
+
+
 .LSBox{
     color:white;
-    float:right;
-    background-color: #64605F;
-    margin-right: 5%;
-    margin-bottom: 1%;
-    margin-top:1%;
     font-family: sans-serif, helvetica;
     font-weight: bold;
     font-style: italic;
+    margin: 0;
+    background-color: #383332;
+    margin-left: 72%;
+    margin-bottom: 5px;
+}
+
+.searchField{
+    border-radius: 7px;
 }
 
 
-#searchGadget_form{
-    background-color:#64605F;
+
+.hiddenStructure{
+    color:white; 
+    background-color: #383332;
 }
 
-/* ===== Ancora para login*/
+.searchButton{
+  background-color: gray; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 7px;
+}
+
+
+/*383332*/
+
+
+
+/* ===== Ancora para login =======*/
 
 #portal-anontools ul{
     position: relative;
     padding: 0;
-    margin: 0;
-    background-color: #64605F; 
-    margin-left: 5%;
+    margin-left: 72%;
+  
 }
 
 
@@ -174,23 +184,22 @@ quando loggado, aparecer apenas a barra*/
     font-family: sans-serif, helvetica;
     color: white;
     text-decoration: none;
-    margin-left: 5%;
-    float:left;
-    margin-top:25px;
     font-weight: bold;
     font-style: italic;
+   
+     
 }
 
 
 #portal-anontools ul li{
     list-style-type:none;
+     margin-bottom: 2%;
 }
 
 
 /* ====== Login em nova Aba ======= */
 .pat-formautofocus{
     position:relative;
-    margin-top: 3%;
     font-family: sans-serif, helvetica;
     color: black;
     font-weight: bold;
@@ -198,13 +207,13 @@ quando loggado, aparecer apenas a barra*/
 }
 
 #__ac_name{
-    margin-left:20px;
+    margin-left:1.1%;
     border-radius:7px;
 }
 
 #__ac_password{
     margin-top: 5px;
-    margin-left:36px;
+    margin-left:18%;
     border-radius:7px;
 }
 
@@ -217,17 +226,15 @@ quando loggado, aparecer apenas a barra*/
 }
 
 
+/* Alterar barra de busca, tirar ela de cima da imagem, colocar ela mais pra baixo, alinhada com acessar*/
+
+
+
 /* ===== Login em uma box ======= */
 
 
 
-
-
-
-
 /*  
-    Pegar barra de busca com replace +/-
     Pegar formulario de login +/-
     Fazer o rodape (E estilizar) (Conteudos baseados no email)
 */
-

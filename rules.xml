@@ -47,7 +47,7 @@
        <drop css:if-content="body.userrole-authenticate" css:theme="#menu1" /> 
        
        
-       <before  css:theme="#menu1" css:content="#above-content-wrapper"/>
+       <before  css:theme="#menu1" css:content="#above-content-wrapper"/> 
        
        <replace css:theme="#searcher" css:content="#searchGadget_form" />
        
@@ -60,7 +60,6 @@
     </rules>
 
 </rules>
-
 
 
 
