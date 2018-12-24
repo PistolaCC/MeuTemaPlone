@@ -35,31 +35,19 @@
        Funciona pois vi que o conteudo que abre nao esta publicado (e conteudo users nao esta publicado)-->
      
      <!--   <replace css:theme-children="div#conteudo" css:content="div#portal-columns" /> -->
-      
+     
+       <!--Coloca o local de login caso o usuario nao esteja logado -->
+       <replace css:if-not-content="body.userrole-authenticated" css:theme="div#logger" css:content="div#portal-anontools" />
       
        <!--Importa o conteudo para o site-->
        <replace css:theme="div#content" css:content="article#content" /> 
        
-       <!--Coloca o local de login caso o usuario nao esteja logado -->
-       <after css:if-not-content="body.userrole-authenticated" css:theme="div#logger" css:content="div#portal-anontools" />  
-       
-       <!--Retira a barra do topo caso nao logado-->
-       <drop css:if-content="body.userrole-authenticate" css:theme="#menu1" /> 
-       
-       
-       <before  css:theme="#menu1" css:content="#above-content-wrapper"/> 
-       
-       <replace css:theme="#searcher" css:content="#searchGadget_form" />
-       
-       
-       
-       
+       <!--Esta funcionando-->
+       <replace css:theme="#barra-de-busca" css:content="#searchGadget_form" />
        
        
        
     </rules>
 
 </rules>
-
-
 

@@ -1,200 +1,156 @@
-/* ======= Gerais ======= */
-
 body{
-    margin: 0;
-    padding:0;    /*  margin 0 e padding 0 resetam as configuracoes padrao do navegador */
-    font-family:sans-serif, helvetica;
-    background-image:url(images/OntoLogo2.png);
-    background-repeat: no-repeat; 
-    background-size: 100% 373px; 
-  
+	font-family: sans-serif, helvetica;
+	margin: 0;	
+	padding: 0;
+	background-color: #babaca;
 }
-
 
 
 #content{
-    position: absolute;  /* Tem como referencia o elemento mais proximo (divs de cima, embaixo)*/
-    margin-top: 27px;      /* OK */
-    margin-left: 4%;        
+	margin-left: 3%;  
+}
+
+.topo-completo{
+	background-image: url(images/OntoLogo2.png);
+	background-size: 100% 450px;
+	background-repeat: no-repeat;	
+	padding-bottom: 450px;
 }
 
 
-footer{
-    clear:both;
+#menu-drop-down ul{
+	padding: 30px;	
+	margin-top: 1%;
+	position: fixed;
+	margin-left: 10%;
+}
+
+#menu-drop-down ul li{
+	float: left;
+	list-style-type: none;
+	display: inline; 
+	margin-top: -2.1%; 
+	padding: 3px 2px;
+	line-height:30px; 
+	margin-left: 0.5%;
+	
 }
 
 
-/*======== MENU do Topo ========= */
-
-
-.menu-top{
-    width: 100%;
-    position:relative;
-    margin-top: 1%;  /*Espaco em branco*/
-    margin-bottom: 0;
-    /*overflow:auto; */
-}
-
-#menu1{
-    margin:0;
-    padding:0;
-    list-style-type: none;  /*Retira bullets*/
-    /*opacity:0.79;*/
-}
-
-
-
-#menu-list li{
-    display:inline-block;  /*Define o modo como a lista sera mostrada (inline (em linha), block (bloco))*/
-}
-
-#menu1 li a{
-    font-family: sans-serif, helvetica;
-    font-size:95%;  
-    padding: 2px 4px; /*Define o preenchimento de uma div*/
-    color:white;
-    text-decoration: none; 
-    font-weight: bold;
-    font-style: italic;
+#searchGadget_form{
+	float: right;
+	margin-top: 1%;
+	margin-left: 70%;
+	color: white;
+	position: fixed;	
 }
 
 
 
-/* ======== Dropdown MENU ======== */
+/*Daqui para baixo eh a estilizacao do botao dropdown*/
 
-li a:hover, .dropdown:hover .dropbtn {
-  background-color: #808080;
-  border-radius:5px;
+.dropbtn {
+	
+	background-color: gray; 
+	color: white;
+	padding: 0px 8px;
+	font-size: 14px;
+	border: none;
+	cursor: pointer;
+	font-style: italic;
+	font-weight: bold;
+	border-radius: 5px;
 }
 
-li .dropdown {
+
+
+.dropdown {
+  position: relative; /*relative*/ 
   display: inline-block;
-  border-radius:5px;
 }
+
 
 .dropdown-content {
   display: none;
-  position: fixed;
-  background-color: gray;
-  margin-left: 0;
-  min-width: 160px;
-  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
-  /*z-index: 1;*/
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px; /* Ajustar*/
+  margin-top: 0;  /* Ajustar*/
+  margin-left: 1%; /*Ajustar*/
+  box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
 .dropdown-content a {
   color: black;
-  padding: 12px 16px; 
+  padding: 0;
   text-decoration: none;
   display: block;
-  text-align: left;
-  
+  text-align: center;
 }
 
+
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
-    border-radius:5px;
+	background-color: #f1f1f1
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
-  border-radius:4px;
+	display: block;
+}
+
+.dropdown:hover .dropbtn {
+	background-color: #3e8e41;
 }
 
 
-/* ========== LOGO de FUNDO ======== */
+/*Reproducao do estilo do botao dropdown para os outros links*/
 
 
-/*
-#logo-fundo {
-    position: relative;
-    left: 0;
-    margin:0;
-    background-image:url(images/OntoLogo2.png); /*Pega a imagem
-    width: 100%;
-    height: 50%;
-    background-position:center top; /*Para colocar uma imagem como background de uma div, voce deve inserir height e width 
-    background-size: 100%; /*  Define a proprocao do background onde a imagem fara fundo
-    background-repeat: no-repeat; /*impede que a imagem se repita
-}
-*/
-
-
-
-/* ======= Barra de Busca ======= */
-
-
-#after-menu-logo{
-    margin-top:26%;
-    background-color: #383332;
-    padding: 5px;
-}
-
-
-.LSBox{
-    color:white;
-    font-family: sans-serif, helvetica;
-    font-weight: bold;
-    font-style: italic;
-    margin: 0;
-    background-color: #383332;
-    margin-left: 72%;
-    margin-bottom: 5px;
-}
-
-.searchField{
-    border-radius: 7px;
+#menu-drop-down a{
+	text-decoration: none;
+	background-color: gray;
+	color: white;
+	padding: 0px 8px;
+	font-size: 14px;
+	border: none;
+	font-style: italic;
+	font-weight: bold;
+	border-radius: 5px;
 }
 
 
 
-.hiddenStructure{
-    color:white; 
-    background-color: #383332;
-}
-
-.searchButton{
-  background-color: gray; /* Green */
-  border: none;
-  color: white;
-  padding: 5px 16px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  border-radius: 7px;
+#menu-drop-down a:hover{
+	background-color: #f1f1f1;
 }
 
 
-/*383332*/
 
 
 
 /* ===== Ancora para login =======*/
 
-#portal-anontools ul{
-    position: relative;
-    padding: 0;
-    margin-left: 72%;
-  
+#portal-anontools ul {
+    margin: 0;
+    padding: 8px;
+    background-color: #383332;
 }
 
+
+#portal-anontools ul li {
+    margin-left: 11%;
+    list-style-type: none;
+}
 
 #portal-anontools ul li a{
     font-family: sans-serif, helvetica;
     color: white;
-    text-decoration: none;
     font-weight: bold;
     font-style: italic;
-   
-     
+    text-decoration: none;
 }
 
 
-#portal-anontools ul li{
-    list-style-type:none;
-     margin-bottom: 2%;
-}
 
 
 /* ====== Login em nova Aba ======= */
@@ -213,7 +169,7 @@ li .dropdown {
 
 #__ac_password{
     margin-top: 5px;
-    margin-left:18%;
+    margin-left: 9%;
     border-radius:7px;
 }
 
@@ -222,19 +178,79 @@ li .dropdown {
 }
 
 .formControls{
-    margin-top: 1%;   
+    margin-top: 1%; 
+}
+
+.context{
+    font-family: sans-serif, helvetica;
+    color:white;
+    background-color: #383332;
+    font-weight: bold;
+    font-style: italic;
+    border-radius: 7px;
 }
 
 
-/* Alterar barra de busca, tirar ela de cima da imagem, colocar ela mais pra baixo, alinhada com acessar*/
+/* ===== Login em box suspensa ======= */
+
+.plone-modal-content{
+     border-radius: 7px;
+}
 
 
+.plone-modal-content .plone-modal-header .plone-modal-close{
+    font-family: sans-serif, helvetica;
+    color:white;
+    background-color: red;
+    font-weight: bold;
+    font-style: italic;
+    border-radius: 7px;
+}
 
-/* ===== Login em uma box ======= */
-
+.plone-modal-content .plone-modal-body  #login-form #__ac_password{
+    margin-left: 26.7%;
+}
 
 
 /*  
     Pegar formulario de login +/-
     Fazer o rodape (E estilizar) (Conteudos baseados no email)
 */
+
+
+
+/* ====== Footer ====== */
+
+#footer{
+    margin: 0;
+    padding: 20px;
+    font-family: sans-serif, helvetica;  
+    background-color: #383332;
+    font-weight: bold;
+    font-style: italic;
+    /*Logo dos apoiadores, patrocinadores, fomentadores, etc*/
+}
+
+
+#patrocinio{
+    text-align: center;
+    color:white;
+}
+
+#fomento{
+    text-align: center;
+    color:white;
+}
+
+
+#apoio{
+    text-align: center;
+    color:white;
+}
+
+
+
+#footer img{
+    width: 120px;
+    height: 100px;
+}
