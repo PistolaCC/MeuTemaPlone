@@ -1,155 +1,198 @@
-body{
-	font-family: sans-serif, helvetica;
-	margin: 0;	
+body {
+	margin: 0;
 	padding: 0;
+	font-family: Sans-serif,Helvetica;
 	background-color: #babaca;
+}
+
+#header{
+	background-image: url(images/OntoLogo2.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 530px;
+	background-color: #383332;
+}
+
+
+/* Login e registrar-se no site */
+
+.logger-register{
+	padding: 15px;
+	background-color: #383332;
+	color: white;
+}
+
+
+#log-bottom{
+	float: left;
+	padding-right: 4%;
+	padding-left: 3%;
+	
 }
 
 
 #content{
-	margin-left: 3%;  
+	margin-left:3%;
 }
+
+/*#footer{
+    color: white;
+    background-color:#383332;
+    
+}*/
+
+
+
+/* topo completo: menu com drop down + barra de busca */
+
 
 .topo-completo{
-	background-image: url(images/OntoLogo2.png);
-	background-size: 100% 450px;
-	background-repeat: no-repeat;	
-	padding-bottom: 450px;
+	padding: 5px 5px 530px 5px;
 }
 
+/*Menu com drop down*/
 
-#menu-drop-down ul{
-	padding: 30px;	
-	margin-top: 1%;
-	position: fixed;
-	margin-left: 10%;
-}
-
-#menu-drop-down ul li{
+#menu-com-drop-down{
 	float: left;
+	padding-right: 45px;
+	text-align: center; 
+	/*margin-right: 25%;*/
+}
+
+#menu-com-drop-down nav ul{
 	list-style-type: none;
-	display: inline; 
-	margin-top: -2.1%; 
-	padding: 3px 2px;
-	line-height:30px; 
-	margin-left: 0.5%;
-	
+	/*display: inline;*/  /*Encosta a barra de busca no canto*/
+}
+
+#menu-com-drop-down nav ul li{
+	position: relative;	
+	display: inline-block;
+	padding: 0;
+} 
+
+
+/* Trata dropdown 1*/
+.dropbtn1{
+    color: white;
+}
+
+.dropdown1{
+	position: relative;
+	display: inline-block;
+	/*border: solid;
+	border-color:green;*/
 }
 
 
-#searchGadget_form{
-	float: right;
-	margin-top: 1%;
-	margin-left: 70%;
-	color: white;
-	position: fixed;	
-}
-
-
-
-/*Daqui para baixo eh a estilizacao do botao dropdown*/
-
-.dropbtn {
-	
-	background-color: gray; 
-	color: white;
-	padding: 0px 8px;
-	font-size: 14px;
-	border: none;
-	cursor: pointer;
-	font-style: italic;
-	font-weight: bold;
-	border-radius: 5px;
-}
-
-
-
-.dropdown {
-  position: relative; /*relative*/ 
-  display: inline-block;
-}
-
-
-.dropdown-content {
+.dropdown-content1 {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px; /* Ajustar*/
-  margin-top: 0;  /* Ajustar*/
-  margin-left: 1%; /*Ajustar*/
-  box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.2);
+  background-color: #383332;
+  opacity:0.9;
+  min-width: 160px;	
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 0;
-  text-decoration: none;
-  display: block;
-  text-align: center;
+  /*border: solid;
+  border-color:red;*/
+ 
 }
 
 
-.dropdown-content a:hover {
-	background-color: #f1f1f1
+
+/* Change color of dropdown links on hover */
+.dropdown-content1 a:hover{
+	opacity: 0.7;
+	border-radius: 12px;
 }
 
-.dropdown:hover .dropdown-content {
+
+/* Show the dropdown menu on hover */
+.dropdown1:hover .dropdown-content1{
 	display: block;
 }
 
-.dropdown:hover .dropbtn {
-	background-color: #3e8e41;
+
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown1:hover .dropbtn1{
+	opacity: 0.7;
 }
 
 
-/*Reproducao do estilo do botao dropdown para os outros links*/
+
+/* Trata dropdown 2*/
 
 
-#menu-drop-down a{
-	text-decoration: none;
-	background-color: gray;
-	color: white;
-	padding: 0px 8px;
-	font-size: 14px;
-	border: none;
+.dropdown2{
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content2 {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+/* Change color of dropdown links on hover */
+.dropdown-content2 a:hover{
+	opacity: 0.7;
+	border-radius: 12px;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown2:hover .dropdown-content2{
+	display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown2:hover .dropbtn2{
+	opacity: 0.7;
+}
+
+
+
+/*barra de busca*/
+
+#searchGadget_form{
+    margin-top: 2%;
+    margin-right: 3%;
+    color:white;
+    font-family: Sans-serif,Helvetica;
+	font-weight:bold;
 	font-style: italic;
-	font-weight: bold;
-	border-radius: 5px;
+	float: right;
+}
+
+.searchButton{
+  font-family: Sans-serif,Helvetica;
+  font-weight:bold;
+  font-style: italic;
+  background-color: #808080; /* Green */
+  border: none;
+  color: white;
+  padding: 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 7px;
 }
 
 
 
-#menu-drop-down a:hover{
-	background-color: #f1f1f1;
+
+
+/*Imagens Menu topo*/
+
+img {
+	width: 100%;
+	height: 39px;
+	border-radius: 12px;
 }
-
-
-
-
-
-/* ===== Ancora para login =======*/
-
-#portal-anontools ul {
-    margin: 0;
-    padding: 8px;
-    background-color: #383332;
-}
-
-
-#portal-anontools ul li {
-    margin-left: 11%;
-    list-style-type: none;
-}
-
-#portal-anontools ul li a{
-    font-family: sans-serif, helvetica;
-    color: white;
-    font-weight: bold;
-    font-style: italic;
-    text-decoration: none;
-}
-
 
 
 
@@ -212,45 +255,26 @@ body{
 }
 
 
-/*  
-    Pegar formulario de login +/-
-    Fazer o rodape (E estilizar) (Conteudos baseados no email)
-*/
 
+/* ===== Ancora para login =======*/
 
-
-/* ====== Footer ====== */
-
-#footer{
+#portal-anontools ul {
     margin: 0;
-    padding: 20px;
-    font-family: sans-serif, helvetica;  
+    padding: 8px;
     background-color: #383332;
+}
+
+
+#portal-anontools ul li {
+    margin-left: 7%;
+    list-style-type: none;
+}
+
+#portal-anontools ul li a{
+    font-family: sans-serif, helvetica;
+    color: white;
     font-weight: bold;
     font-style: italic;
-    /*Logo dos apoiadores, patrocinadores, fomentadores, etc*/
-}
-
-
-#patrocinio{
-    text-align: center;
-    color:white;
-}
-
-#fomento{
-    text-align: center;
-    color:white;
-}
-
-
-#apoio{
-    text-align: center;
-    color:white;
-}
-
-
-
-#footer img{
-    width: 120px;
-    height: 100px;
+    text-decoration: none;
+    margin-right: 2%;
 }

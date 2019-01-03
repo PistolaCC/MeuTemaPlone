@@ -37,8 +37,9 @@
      <!--   <replace css:theme-children="div#conteudo" css:content="div#portal-columns" /> -->
      
        <!--Coloca o local de login caso o usuario nao esteja logado -->
-       <replace css:if-not-content="body.userrole-authenticated" css:theme="div#logger" css:content="div#portal-anontools" />
-      
+       <replace css:if-not-content="body.userrole-authenticated" css:theme="div#log-bottom" css:content="div#portal-anontools" />
+       
+       
        <!--Importa o conteudo para o site-->
        <replace css:theme="div#content" css:content="article#content" /> 
        
@@ -50,4 +51,3 @@
     </rules>
 
 </rules>
-
